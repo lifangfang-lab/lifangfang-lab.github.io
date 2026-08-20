@@ -329,9 +329,88 @@ h2, h3 { font-family: var(--font-serif); }
   .hero .name-zh { display: block; margin: 4px 0 0; }
 }
 
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.gallery-item {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: zoom-in;
+  transition: transform .2s, box-shadow .2s;
+}
+.gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item figcaption {
+  padding: 10px 14px;
+  font-size: .88rem;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10, 15, 24, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 18px; right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  opacity: .85;
+}
+.lightbox-close:hover { opacity: 1; }
+.lightbox-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 0; right: 0;
+  text-align: center;
+  color: #dfe8f2;
+  font-size: .95rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 640px) {
   .section { padding: 56px 0; }
   .research-grid, .openings-grid, .contact-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .gallery-item img { height: 180px; }
   .hero { padding: 64px 0; }
 
   .nav-toggle { display: flex; }

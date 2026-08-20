@@ -64,4 +64,48 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  /* ---- gallery lightbox ---- */
+  var galleryItems = document.querySelectorAll(".gallery-item img");
+  if (galleryItems.length) {
+    var lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-label", "Photo viewer");
+    lightbox.innerHTML =
+      '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+      '<img alt="">' +
+      '<div class="lightbox-caption"></div>';
+    document.body.appendChild(lightbox);
+
+    var lbImg = lightbox.querySelector("img");
+    var lbCaption = lightbox.querySelector(".lightbox-caption");
+    var lbClose = lightbox.querySelector(".lightbox-close");
+
+    function openLightbox(src, caption) {
+      lbImg.src = src;
+      lbCaption.textContent = caption || "";
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    galleryItems.forEach(function (img) {
+      img.addEventListener("click", function () {
+        var fig = img.closest(".gallery-item");
+        var cap = fig ? fig.querySelector("figcaption") : null;
+        openLightbox(img.src, cap ? cap.textContent : "");
+      });
+    });
+    lbClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
+    });
+  }
 })();

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fangfang Li — Personal Homepage</title>
+  <meta name="description" content="Fangfang Li. Ph.D. Candidate in Biomedical Engineering, School of Medicine, Nanjing University.">
+  <!-- ============================================================
+       PERSONAL HOMEPAGE OF FANGFANG LI (李芳芳)
+       ------------------------------------------------------------
+       HOW TO CUSTOMIZE:
+       Search for "TODO" comments below to find every piece of
+       content you may want to replace (name, title, bio, papers,
+       activities, openings, contact, photo, links).
+       See README.md for a full guide.
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav-brand">Fangfang Li</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#openings">Openings</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO / HOME ================= -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <!-- TODO: your full name (Chinese name optional) -->
+          <h1>Fangfang Li <span class="name-zh">李芳芳</span></h1>
+          <!-- TODO: your current position / title -->
+          <p class="hero-title">Ph.D. Candidate in Biomedical Engineering</p>
+          <!-- TODO: your department & university -->
+          <p class="hero-affil">School of Medicine, Nanjing University · Nanjing, China</p>
+          <ul class="hero-contact">
+            <!-- TODO: your email -->
+            <li>📧 <a href="mailto:lifangfang202302@163.com">lifangfang202302@163.com</a></li>
+            <!-- TODO: optional links — GitHub / Google Scholar / ORCID / CV.
+                 Keep only the ones you want, or add more. -->
+            <li>🐙 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li>🎓 <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+        <div class="hero-photo">
+          <!-- Your photo: images/photo.jpg. To change it, replace the file
+               images/photo.jpg with a new picture (square-ish works best). -->
+          <img src="images/photo.jpg" alt="Fangfang Li" class="profile-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              <!-- TODO: write 2–4 sentences about yourself: your current stage,
+                   research focus, and what you are working toward. -->
+              I am a Ph.D. candidate in Biomedical Engineering at the School of Medicine,
+              Nanjing University. My research sits at the intersection of medicine and
+              engineering, where I use computational methods to address problems in
+              medical imaging and clinical diagnosis.
+            </p>
+            <p>
+              I am passionate about translating engineering tools into practical solutions
+              that help clinicians make better decisions, and I enjoy collaborating with
+              researchers from both medical and technical backgrounds.
+            </p>
+          </div>
+          <aside class="about-card">
+            <h3>Education</h3>
+            <!-- TODO: update your education history (newest first). -->
+            <ul class="edu-list">
+              <li>
+                <strong>Ph.D. in Biomedical Engineering</strong>
+                <span>Nanjing University &middot; 2023 – Present</span>
+              </li>
+              <li>
+                <strong>B.S. in [Your Major]</strong>
+                <span>[Your University] &middot; 20XX – 20XX</span>
+              </li>
+            </ul>
+            <h3>Interests</h3>
+            <ul class="tag-list">
+              <!-- TODO: adjust your interest tags -->
+              <li>Medical Image Analysis</li>
+              <li>AI in Healthcare</li>
+              <li>Computational Modeling</li>
+              <li>Deep Learning</li>
+              <li>Biomedical Signal Processing</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section id="research" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
+        <p class="section-lead">
+          <!-- TODO: one or two sentences summarizing your research -->
+          My research develops computational and deep-learning frameworks to improve
+          medical image analysis and disease diagnosis. Current directions include:
+        </p>
+        <div class="research-grid">
+          <!-- TODO: customize the research topics below -->
+          <div class="research-card">
+            <div class="research-icon">🩻</div>
+            <h3>Medical Image Analysis</h3>
+            <p>Developing segmentation, registration and classification methods for
+            clinical imaging data such as CT, MRI and ultrasound.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">🤖</div>
+            <h3>Deep Learning for Diagnosis</h3>
+            <p>Building deep learning models that assist clinicians with earlier and
+            more accurate diagnosis of disease.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">🧬</div>
+            <h3>Biomedical Signal Processing</h3>
+            <p>Analyzing physiological signals (ECG, EEG, etc.) to extract biomarkers
+            for monitoring and prediction.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">⚙️</div>
+            <h3>Computational Modeling</h3>
+            <p>Combining physics-based models with data-driven methods to simulate
+            complex biological systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACTIVITIES ================= -->
+    <section id="activities" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Activities</h2>
+        <p class="section-lead">Talks, conferences, awards and other academic activities.</p>
+        <div class="timeline">
+          <!-- TODO: update with your real activities (newest first).
+               Add more <div class="timeline-item"> blocks as needed. -->
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-body">
+              <h3>Oral Presentation</h3>
+              <p>Presented our work on AI-assisted diagnosis at the Annual Conference of
+              Biomedical Engineering, [Location].</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-body">
+              <h3>Conference Attendance</h3>
+              <p>Attended [Conference Name] and presented a poster on medical image
+              segmentation.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-body">
+              <h3>Scholarship / Award</h3>
+              <p>Received [Scholarship or Award Name] at Nanjing University.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPENINGS / RECRUITMENT ================= -->
+    <section id="openings" class="section">
+      <div class="container">
+        <h2 class="section-title">Openings</h2>
+        <p class="section-lead">
+          <!-- TODO: adapt this section to your situation. If you lead or join a lab
+               that recruits students / research assistants / postdocs, describe the
+               positions here. Otherwise, you can re-frame it as collaboration. -->
+          Our group is always looking for motivated students and collaborators who are
+          interested in biomedical engineering and AI for healthcare.
+        </p>
+        <div class="openings-grid">
+          <div class="opening-card">
+            <h3>🎓 Graduate Students</h3>
+            <p>We recruit Master's and Ph.D. students in biomedical engineering,
+            computer science, and related interdisciplinary fields.</p>
+          </div>
+          <div class="opening-card">
+            <h3>🔬 Research Assistants</h3>
+            <p>Undergraduate students who want hands-on research experience in medical
+            image analysis or deep learning are welcome to join.</p>
+          </div>
+          <div class="opening-card">
+            <h3>🤝 Collaboration</h3>
+            <p>Open to collaboration with clinicians and researchers on medical imaging,
+            digital health, and translational AI projects.</p>
+          </div>
+        </div>
+        <div class="opening-note">
+          <!-- TODO: customize the requirements / how-to-apply text -->
+          <p><strong>How to apply:</strong> if you are interested, please send your CV
+          and a short introduction to
+          <a href="mailto:lifangfang202302@163.com">lifangfang202302@163.com</a>
+          with the subject line “Application – [Position]”.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h3>Email</h3>
+              <!-- TODO: your email -->
+              <p><a href="mailto:lifangfang202302@163.com">lifangfang202302@163.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h3>Address</h3>
+              <!-- TODO: your lab / office address -->
+              <p>School of Medicine, Nanjing University,<br>Nanjing, Jiangsu, China</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <h3>Links</h3>
+              <!-- TODO: your profiles -->
+              <p>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> ·
+                <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2025</span> Fangfang Li. All rights reserved.</p>
+      <p class="footer-sub">Last updated: 2025</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
